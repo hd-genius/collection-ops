@@ -12,23 +12,14 @@
   ],
   "author": "Roy Stewart",
   "license": "MIT",
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest"
-    }
-  },
+  "jest": {},
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "babel-jest": "^24.3.1",
     "babel-loader": "^8.0.5",
-    "jest": "^24.3.1",
+    "jest": "^24.9.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   }

@@ -1,5 +1,0 @@
-language: node_js
-install:
-  - "npm i"
-scripts:
-  - "npm run test"
