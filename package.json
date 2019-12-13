@@ -12,6 +12,7 @@
   ],
   "author": "Roy Stewart",
   "license": "MIT",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "jest": {},
   "devDependencies": {
     "@babel/cli": "^7.2.3",
