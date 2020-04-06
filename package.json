@@ -1,27 +1,23 @@
 {
-  "name": "fnjs",
-  "version": "0.1.0",
-  "description": "functional programming library for javascript",
+  "name": "functional-collections",
+  "version": "0.2.0",
+  "description": "functional programming library to simplify collection operations in javascript",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel src -d dist",
     "test": "./node_modules/.bin/jest"
   },
   "keywords": [
-    "functional"
+    "functional programming",
+    "collections"
   ],
+  "type": "module",
   "author": "Roy Stewart",
   "license": "MIT",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "jest": {},
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "babel-jest": "^24.3.1",
-    "babel-loader": "^8.0.5",
-    "jest": "^24.9.0",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
+    "jest": "^24.9.0"
   }
 }
