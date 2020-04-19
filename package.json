@@ -13,9 +13,6 @@
   "type": "module",
   "author": "Roy Stewart",
   "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "jest": {},
   "devDependencies": {
     "jest": "^24.9.0"
