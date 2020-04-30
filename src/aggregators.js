@@ -1,5 +1,6 @@
 /**
- * A function that takes an iterable and aggregates it to create a single result
+ * A function that takes an iterable and aggregates it to create a single result.
+ * Cannot be used with infinite collections, it will cause an infinite loop.
  * @callback Aggregator
  * @template T, U
  * @param {Iterable<T>} source an iterable to be aggregated

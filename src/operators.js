@@ -103,6 +103,16 @@ exports.concat = function*(...sources) {
     }
 }
 
+/**
+ * Cannot be used with infinite collections, it will cause an infinite loop.
+ * Is not entirely lazily evaluated, all values are pulled from source
+ * immediately but are sorted only as requested.
+ * @function
+ * @template T
+ * @param {Comparator<T>} comparator
+ * @returns {Operator<T, T>} an Operator that returns values from source in
+ * the order of largest to smallest using comparator.
+ */
 exports.sort = comparator => function*(source) {
     let remainingValues = Array.from(source);
     while (remainingValues.length > 0) {
