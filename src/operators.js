@@ -15,7 +15,7 @@
 
 /**
  * A function that takes an iterable and produces a Generator that that returns values after an operation has been applied the values in the source iterable
- * @callback Operation
+ * @callback Operator
  * @template T, U
  * @param {Iterable<T>} source - the source iterable to be operated on
  * @return {Generator<U>} the values from the source after the operation has been applied
@@ -25,7 +25,7 @@
  * @function
  * @template T
  * @param {Predicate<T>} predicate determines if a value from the source iterable will be in the output Generator
- * @return {Operation<T, T>} a new filter operation that uses predicate
+ * @return {Operator<T, T>} a new filter operation that uses predicate
  */
 exports.filter = predicate => function*(source) {
     for (const value of source) {
@@ -39,7 +39,7 @@ exports.filter = predicate => function*(source) {
  * @function
  * @template T, U
  * @param {Mapper<T, U>} mapper
- * @return {Operation<T, U>} a new map operation that uses mapper
+ * @return {Operator<T, U>} a new map operation that uses mapper
  */
 exports.map = operation => function*(source) {
     for (const value of source) {
@@ -123,6 +123,6 @@ function chainOperators(first, second) {
     return source => second(first(source));
 }
 
-exports.combineOperations = function(...operators) {
+exports.combineOperators = function(...operators) {
     return operators.reduce(chainOperators);
 }
