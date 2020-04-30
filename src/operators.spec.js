@@ -98,3 +98,23 @@ describe('drop', () => {
         expect(secondUsage.next().done).toBeTruthy();
     });
 });
+
+describe('sideEffect', () => {
+    testCasesForData([1, 2, 3, 4])('should call the side effect for each value yielded when given a(n) %s', (type, dataSource) => {
+        const sideEffectFunction = jest.fn();
+        for (const value of operators.sideEffect(sideEffectFunction)(dataSource)) {
+            expect(sideEffectFunction).toBeCalledWith(value);
+        }
+    });
+
+    testCasesForData([1, 2, 3, 4])('should only call the side effect when the consumer requests the next value when given a(n) %s', (type, dataSource) => {
+        const sideEffectFunction = jest.fn();
+        const sourceWithSideEffect = operators.sideEffect(sideEffectFunction)(dataSource);
+
+        sourceWithSideEffect.next();
+        sourceWithSideEffect.next();
+
+        expect(sideEffectFunction).not.toBeCalledWith(3);
+        expect(sideEffectFunction).not.toBeCalledWith(4);
+    });
+});

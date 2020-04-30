@@ -119,6 +119,13 @@ exports.sort = comparator => function*(source) {
     }
 }
 
+exports.sideEffect = effect => function*(source) {
+    for (const value of source) {
+        effect(value);
+        yield value;
+    }
+}
+
 function chainOperators(first, second) {
     return source => second(first(source));
 }
