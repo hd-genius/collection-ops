@@ -140,6 +140,11 @@ function chainOperators(first, second) {
     return source => second(first(source));
 }
 
+/**
+ * @function
+ * @param {...Operator} operators an operator to combine
+ * @returns {Operator} an Operator that applies each provided operator in order
+ */
 exports.combineOperators = function(...operators) {
     return operators.reduce(chainOperators);
 }
