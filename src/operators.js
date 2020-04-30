@@ -54,13 +54,14 @@ exports.flat = function*(source) {
 }
 
 exports.take = count => function*(source) {
+    let amountToTake = count;
     for (const value of source) {
-        if (count > 0) {
+        if (amountToTake > 0) {
             yield value;
         } else {
             break;
         }
-        count--;
+        amountToTake--;
     }
 }
 
@@ -122,6 +123,6 @@ function chainOperators(first, second) {
     return source => second(first(source));
 }
 
-exports.combineOperators = function(...operators) {
+exports.combineOperations = function(...operators) {
     return operators.reduce(chainOperators);
 }
