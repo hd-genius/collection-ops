@@ -45,6 +45,23 @@ describe('take', () => {
         }
         expect(result.next().done).toBeTruthy();
     });
+
+    it('should create an operation that can be reused multiple times', () => {
+        const dataSource = [1, 2, 3, 4, 5];
+        const takeOperation = operators.take(3);
+        
+        const firstUsage = takeOperation(dataSource);
+        for (let i = 1; i <= 3; i++) {
+            expect(firstUsage.next().value).toEqual(i);
+        }
+        expect(firstUsage.next().done).toBeTruthy();
+
+        const secondUsage = takeOperation(dataSource);
+        for (let i = 1; i <= 3; i++) {
+            expect(secondUsage.next().value).toEqual(i);
+        }
+        expect(secondUsage.next().done).toBeTruthy();
+    });
 });
 
 describe('drop', () => {
@@ -79,5 +96,5 @@ describe('drop', () => {
             expect(secondUsage.next().value).toEqual(i);
         }
         expect(secondUsage.next().done).toBeTruthy();
-    })
+    });
 });
