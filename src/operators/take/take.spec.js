@@ -1,0 +1,30 @@
+const take = require ('./take');
+const { testCasesForData } = require('../../test-utils');
+
+
+describe('take', () => {
+    testCasesForData([1, 2, 3])('should only return the first number of values that were asked for when given a(n) %s', (type, dataSource) => {
+        const result = take(3)(dataSource);
+        for (let i = 0; i < 3; i++) {
+            result.next();
+        }
+        expect(result.next().done).toBeTruthy();
+    });
+
+    it('should create an operation that can be reused multiple times', () => {
+        const dataSource = [1, 2, 3, 4, 5];
+        const takeOperation = take(3);
+        
+        const firstUsage = takeOperation(dataSource);
+        for (let i = 1; i <= 3; i++) {
+            expect(firstUsage.next().value).toEqual(i);
+        }
+        expect(firstUsage.next().done).toBeTruthy();
+
+        const secondUsage = takeOperation(dataSource);
+        for (let i = 1; i <= 3; i++) {
+            expect(secondUsage.next().value).toEqual(i);
+        }
+        expect(secondUsage.next().done).toBeTruthy();
+    });
+});
