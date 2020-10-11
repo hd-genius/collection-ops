@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: operators/map/map.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,44 +17,29 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: operators/map/map.js</h1>
 
     
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h1>What Is The CollectionOps Library</h1>
-<p>The CollectionOps library is a simple lightweight library that aims to make task of handling collections in javascript more functional. CollectionOps brings lazily evaluated operations that fit in with the core language as smoothly as possible. These operations also work on types other than just arrays! They work on any object type that implements the Iterable interface in JavaScript. This means that these operations work on Sets, Generators, and even custom iterables. Many of these operations are also applicable to infinite collections, such as a never-ending generator or custom Iterable.</p>
-<h1>Reasons to use CollectionOps in your project</h1>
-<p>CollectionOps is a highly performant and flexible solution that allows you to write clean, declarative, and functional JavScript code. Several common reasons that you may want to use FunctionalCollections includes:</p>
-<ul>
-<li>Lazily evaluated collection operations</li>
-<li>Robust operations to handle any type of collection</li>
-<li>A declarative rather than imperative code style</li>
-</ul></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @function map
+ * @template T, U
+ * @param {Mapper&lt;T, U>} mapper
+ * @return {Operator&lt;T, U>} a new map operation that uses mapper
+ */
+module.exports = mapper => function*(source) {
+    for (const value of source) {
+        yield mapper(value);
+    }
+};
+</code></pre>
+        </article>
     </section>
-
-
 
 
 

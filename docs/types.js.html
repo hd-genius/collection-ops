@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: types.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,44 +17,40 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: types.js</h1>
 
     
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h1>What Is The CollectionOps Library</h1>
-<p>The CollectionOps library is a simple lightweight library that aims to make task of handling collections in javascript more functional. CollectionOps brings lazily evaluated operations that fit in with the core language as smoothly as possible. These operations also work on types other than just arrays! They work on any object type that implements the Iterable interface in JavaScript. This means that these operations work on Sets, Generators, and even custom iterables. Many of these operations are also applicable to infinite collections, such as a never-ending generator or custom Iterable.</p>
-<h1>Reasons to use CollectionOps in your project</h1>
-<p>CollectionOps is a highly performant and flexible solution that allows you to write clean, declarative, and functional JavScript code. Several common reasons that you may want to use FunctionalCollections includes:</p>
-<ul>
-<li>Lazily evaluated collection operations</li>
-<li>Robust operations to handle any type of collection</li>
-<li>A declarative rather than imperative code style</li>
-</ul></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * A function that takes a value and determines a true of false status for the value
+ * @callback Predicate
+ * @template T
+ * @param {T} value to be evaluated
+ * @returns {boolean} whether or not the provided value satisfies the criteria
+ */
+
+/**
+ * @callback Mapper
+ * @template T, U
+ * @param {T} value - the input value to be mapped
+ * @returns {U} the result of the mapping
+ */
+
+/**
+ * A function that takes an iterable and produces a Generator that that returns values after an operation has been applied the values in the source iterable
+ * @callback Operator
+ * @template T, U
+ * @param {Iterable&lt;T>} source - the source iterable to be operated on
+ * @return {Generator&lt;U>} the values from the source after the operation has been applied
+ */
+</code></pre>
+        </article>
     </section>
-
-
 
 
 

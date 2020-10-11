@@ -3,7 +3,7 @@ const sort = require('./sort');
 
 
 describe('sort', () => {
-    testCasesForData([4, 2, 3, 5, 1])('should sort in the correct order', (type, dataSource) => {
+    testCasesForData([4, 2, 3, 5, 1])('should create an operation that sorts values in the correct order when given a(n) %s', (type, dataSource) => {
         const comparator = (x, y) => x - y;
 
         let expectedValue = 1;

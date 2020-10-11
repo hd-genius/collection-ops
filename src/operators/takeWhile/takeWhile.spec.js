@@ -9,4 +9,6 @@ describe('takeWhile', () => {
         expect(result.next().value).toBe(1);
         expect(result.next().done).toBeTruthy();
     });
+
+    it('should create a reusable operation', () => {})
 });
