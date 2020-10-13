@@ -8,8 +8,8 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jest",
-    "docs": "./node_modules/.bin/jsdoc -R README.md -r src -d docs"
+    "test": "jest",
+    "docs": "jsdoc -R README.md -r src -d docs"
   },
   "keywords": [
     "functional programming",
