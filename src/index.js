@@ -1,5 +1,4 @@
 module.exports = {
-    ...require('./operators'),
-    ...require('./aggregators/aggregators'),
-    ...require('./generators/generators')
+    ...require('./operators/operators'),
+    ...require('./aggregators/aggregators')
 }
