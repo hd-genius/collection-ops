@@ -1,0 +1,11 @@
+# CI/CD
+.github
+
+# Tests and test dependencies
+*.spec.js
+test-utils.js
+
+# Documentation files
+docs
+types.js
+example.js
