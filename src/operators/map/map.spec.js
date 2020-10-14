@@ -1,5 +1,5 @@
 const { testCasesForData } = require('../../test-utils');
-const map = require('./map')
+const { map } = require('collection-ops')
 
 
 describe('map', () => {

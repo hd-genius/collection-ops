@@ -1,4 +1,4 @@
-const filter = require('./filter');
+const { filter } = require('collection-ops');
 const { testCasesForData } = require('../../test-utils');
 
 

@@ -1,4 +1,4 @@
-const { skip } = require('./skip');
+const { skip } = require('collection-ops');
 const { testCasesForData } = require('../../test-utils');
 
 describe('skip', () => {

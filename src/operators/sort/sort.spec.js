@@ -1,5 +1,5 @@
 const { testCasesForData } = require('../../test-utils');
-const sort = require('./sort');
+const { sort } = require('collection-ops');
 
 
 describe('sort', () => {

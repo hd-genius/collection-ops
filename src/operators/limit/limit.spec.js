@@ -1,4 +1,4 @@
-const { limit } = require ('./limit');
+const { limit } = require ('collection-ops');
 const { testCasesForData } = require('../../test-utils');
 
 

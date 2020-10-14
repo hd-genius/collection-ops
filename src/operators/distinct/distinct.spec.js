@@ -1,4 +1,4 @@
-const distinct = require("./distinct");
+const { distinct } = require('collection-ops');
 
 describe('distinct', () => {
     it('should be reusable', () => {

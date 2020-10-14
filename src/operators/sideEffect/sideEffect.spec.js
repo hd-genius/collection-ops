@@ -1,4 +1,4 @@
-const sideEffect = require('./sideEffect');
+const { sideEffect } = require('collection-ops');
 const { testCasesForData } = require('../../test-utils');
 
 

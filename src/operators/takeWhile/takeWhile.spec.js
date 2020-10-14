@@ -1,4 +1,4 @@
-const takeWhile = require('./takeWhile');
+const { takeWhile } = require('collection-ops');
 
 describe('takeWhile', () => {
     it('should return an operation that stops emitting values once the predicate returns false', () => {
