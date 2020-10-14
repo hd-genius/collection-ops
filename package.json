@@ -20,7 +20,7 @@
   "license": "MIT",
   "jest": {},
   "devDependencies": {
-    "jest": "^24.9.0",
-    "jsdoc": "^3.6.4"
+    "jest": "^26.5.3",
+    "jsdoc": "^3.6.6"
   }
 }
