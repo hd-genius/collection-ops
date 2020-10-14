@@ -1,6 +1,6 @@
 module.exports = {
     filter: require('./filter/filter'),
-    flat: require('./flat/flat'),
+    ...require('./flatten/flatten'),
     map: require('./map/map'),
     ...require('./limit/limit'),
     sort: require('./sort/sort'),
