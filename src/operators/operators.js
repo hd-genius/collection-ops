@@ -2,7 +2,7 @@ module.exports = {
     filter: require('./filter/filter'),
     flat: require('./flat/flat'),
     map: require('./map/map'),
-    take: require('./take/take'),
+    ...require('./limit/limit'),
     sort: require('./sort/sort'),
     ...require('./skip/skip'),
     distinct: require('./distinct/distinct'),
