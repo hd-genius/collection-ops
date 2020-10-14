@@ -1,4 +1,4 @@
-module.exports = count => function*(source) {
+exports.skip = count => function*(source) {
     let amountToDrop = count;
     for (const value of source) {
         if (amountToDrop > 0) {

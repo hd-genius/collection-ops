@@ -4,7 +4,7 @@ module.exports = {
     map: require('./map/map'),
     take: require('./take/take'),
     sort: require('./sort/sort'),
-    drop: require('./drop/drop'),
+    ...require('./skip/skip'),
     distinct: require('./distinct/distinct'),
     sideEffect: require('./sideEffect/sideEffect'),
     takeWhile: require('./takeWhile/takeWhile'),
