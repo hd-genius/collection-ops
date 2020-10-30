@@ -1,3 +1,4 @@
 module.exports = {
-    ...require('./reusable/reusable')
+    ...require('./reusable/reusable'),
+    combineOperators: require('./combineOperators/combineOperators')
 }

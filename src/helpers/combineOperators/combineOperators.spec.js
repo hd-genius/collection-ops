@@ -15,4 +15,6 @@ describe('combineOperators', () => {
         expect(secondOperator).toHaveBeenCalledWith(firstOperatorResult);
     });
 
+    it.skip('should create a reusable operation', () => {});
+
 });

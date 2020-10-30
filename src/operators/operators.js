@@ -8,6 +8,5 @@ module.exports = {
     distinct: require('./distinct/distinct'),
     sideEffect: require('./sideEffect/sideEffect'),
     takeWhile: require('./takeWhile/takeWhile'),
-    combineOperators: require('./combineOperators/combineOperators'),
-    concat: require('./concat/concat'),
+    concat: require('./concat/concat')
 };
