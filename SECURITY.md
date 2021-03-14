@@ -11,4 +11,4 @@ Since CollectionOps is still in a pre-release state only the latest version is r
 
 ## Reporting a Vulnerability
 
-To report a security vulnerability you ca create a GitHub issue including the details of the vulnerability. The GitHub issues are check frequently and you can expect to track the status of a vulnerability through the related GitHub issue.
+To report a security vulnerability you can create a GitHub issue including the details of the vulnerability. The GitHub issues are checked and updated frequently so that you can track the status of vulnerabilities.
