@@ -1,6 +1,6 @@
 {
   "name": "collection-ops",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "functional programming library to simplify collection operations in javascript",
   "homepage": "http://collection-ops.hdgenius.me/",
   "bugs": {
