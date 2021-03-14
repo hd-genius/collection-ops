@@ -1,4 +1,4 @@
 module.exports = {
-    ...require('./reusable/reusable'),
+    reusable: require('./reusable/reusable'),
     chain: require('./chain/chain')
 }

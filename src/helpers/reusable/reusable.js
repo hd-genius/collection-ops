@@ -1,5 +1,3 @@
-exports.reusable = iteratorFactory => new ReusableIterable(iteratorFactory);
-
 class ReusableIterable {
     iteratorFactory;
 
@@ -11,3 +9,5 @@ class ReusableIterable {
         return this.iteratorFactory();
     }
 }
+
+module.exports = iteratorFactory => new ReusableIterable(iteratorFactory);

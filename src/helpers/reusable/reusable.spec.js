@@ -1,4 +1,4 @@
-const { reusable } = require("./reusable");
+const { reusable } = require("collection-ops");
 
 describe('reusable', () => {
 
