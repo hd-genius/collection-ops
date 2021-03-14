@@ -1,10 +1,10 @@
-const { combineOperators } = require('collection-ops');
+const { chain } = require('collection-ops');
 
 describe('combineOperators', () => {
     it('should create an operator that applies each operator it was given in order', () => {
         const firstOperator = jest.fn();
         const secondOperator = jest.fn();
-        const combined = combineOperators(firstOperator, secondOperator);
+        const combined = chain(firstOperator, secondOperator);
 
         const firstOperatorResult = ['nextValue'];
         firstOperator.mockReturnValue(firstOperatorResult);
