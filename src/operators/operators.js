@@ -6,7 +6,7 @@ module.exports = {
     sort: require('./sort/sort'),
     ...require('./skip/skip'),
     distinct: require('./distinct/distinct'),
-    sideEffect: require('./sideEffect/sideEffect'),
+    effect: require('./effect/effect'),
     takeWhile: require('./takeWhile/takeWhile'),
     concat: require('./concat/concat'),
     ...require('./skipWhile/skipWhile')
