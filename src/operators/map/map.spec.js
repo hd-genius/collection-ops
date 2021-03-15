@@ -1,12 +1,11 @@
-const { testCasesForData } = require('../../test-utils');
+const { testCasesForData, testThatTheResultIsReusable } = require('../../test-utils');
 const { map } = require('collection-ops')
 
-
 describe('map', () => {
+    testThatTheResultIsReusable(map(val => val * 2)([1, 2, 3]));
+
     testCasesForData([1, 2, 3])('should apply the operation to every value when given a(n) %s', (type, dataSource) => {
         const result = map(val => val * 2)(dataSource);
-        expect(result.next().value).toBe(2);
-        expect(result.next().value).toBe(4);
-        expect(result.next().value).toBe(6);
+        expect(result).toHaveValues(2, 4, 6);
     });
 });
