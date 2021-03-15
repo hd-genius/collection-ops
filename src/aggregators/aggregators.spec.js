@@ -1,17 +1,5 @@
 let aggregators = require('./aggregators');
-
-function testCasesForData(data) {
-    const exampleArray = Array.from(data);
-    function* exampleGenerator() {
-        for (const value of data) {
-            yield value;
-        }
-    }
-    return test.each([
-        ['Array', exampleArray],
-        ['Generator', exampleGenerator()]
-    ])
-}
+const { testCasesForData } = require('../test-utils');
 
 
 describe('min', () => {
