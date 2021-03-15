@@ -1,8 +1,10 @@
 const { limit } = require ('collection-ops');
-const { testCasesForData } = require('../../test-utils');
+const { testCasesForData, testThatTheResultIsReusable } = require('../../test-utils');
 
 
 describe('limit', () => {
+    testThatTheResultIsReusable(limit(2)([1, 2, 3]));
+
     testCasesForData([1, 2, 3])('should only return the first number of values that were asked for when given a(n) %s', (type, dataSource) => {
         const result = limit(3)(dataSource);
         expect(result).toHaveValues(1, 2, 3);
