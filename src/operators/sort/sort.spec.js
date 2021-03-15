@@ -8,12 +8,7 @@ describe('sort', () => {
     testCasesForData([4, 2, 3, 5, 1])('should create an operation that sorts values in the correct order when given a(n) %s', (type, dataSource) => {
         const comparator = (x, y) => x - y;
 
-        let expectedValue = 1;
-        for (const value of sort(comparator)(dataSource)) {
-            expect(value).toEqual(expectedValue);
-            expectedValue++;
-        }
+        const result = sort(comparator)(dataSource);
+        expect(result).toHaveValues(1, 2, 3, 4, 5);
     });
-
-    it('should create a reusable operation', () => {});
 });
