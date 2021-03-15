@@ -9,7 +9,7 @@ describe('reusable', () => {
     }
 
     it('should fetch the iterator from the factory each time an iterator is requested', () => {
-        const reusableIterable = reusable(testGenerator);
+        const reusableIterable = reusable(testGenerator)();
 
         const firstIterator = reusableIterable[Symbol.iterator]();
         expect(firstIterator.next().value).toBe(1);

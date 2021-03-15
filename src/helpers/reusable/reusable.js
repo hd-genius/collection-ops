@@ -10,4 +10,6 @@ class ReusableIterable {
     }
 }
 
-module.exports = iteratorFactory => new ReusableIterable(iteratorFactory);
+module.exports = function(target) {
+    return (...args) => new ReusableIterable(() => target(...args));
+};

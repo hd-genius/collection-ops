@@ -1,3 +1,5 @@
+const reusable = require("../../helpers/reusable/reusable");
+
 /**
  * @function distinct
  * @template T
@@ -5,7 +7,7 @@
  * @param source
  * @returns {Generator<any, void, *>}
  */
-module.exports = function*(source) {
+function* distinct(source) {
     let previousValues = new Set();
     for (const value of source) {
         if (!previousValues.has(value)) {
@@ -14,3 +16,5 @@ module.exports = function*(source) {
         }
     }
 };
+
+module.exports = reusable(distinct);

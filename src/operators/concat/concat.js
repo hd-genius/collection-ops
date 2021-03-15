@@ -6,6 +6,4 @@ function* concat(...sources) {
     }
 };
 
-module.exports = function(...sources) {
-    return reusable(() => concat(...sources));
-}
+module.exports = reusable(concat);

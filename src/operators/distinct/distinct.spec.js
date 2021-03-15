@@ -1,7 +1,9 @@
 const { distinct } = require('collection-ops');
-const { testCasesForData } = require('../../test-utils');
+const { testCasesForData, testThatTheResultIsReusable } = require('../../test-utils');
 
 describe('distinct', () => {
+    testThatTheResultIsReusable(distinct([1, 1, 2, 2, 3]));
+
     testCasesForData([1, 1, 2, 2, 3, 3])('should only return one instance of a given value', (type, data) => {
         const result = distinct(data);
         expect(result).toHaveValues(1, 2, 3);
