@@ -6,13 +6,6 @@ describe('concat', () => {
 
     test('should return an iterable that includes the values each source iterable in order', () => {
         const result = concat([1, 2, 3], [4, 5]);
-
-        const iterable = result[Symbol.iterator]();
-        
-        expect(iterable.next().value).toBe(1);
-        expect(iterable.next().value).toBe(2);
-        expect(iterable.next().value).toBe(3);
-        expect(iterable.next().value).toBe(4);
-        expect(iterable.next().value).toBe(5);
+        expect(result).toHaveValues(1, 2, 3, 4, 5);
     });
 });
