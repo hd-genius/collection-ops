@@ -2,13 +2,7 @@ exports.max = require('./max/max');
 
 exports.min = require('./min/min');
 
-exports.count = function(source) {
-    let count = 0;
-    for (const value of source) {
-        count++;
-    }
-    return count;
-}
+exports.count = require('./count/count');
 
 exports.find = predicate => source => {
     for (const value of source) {

@@ -2,18 +2,6 @@ let aggregators = require('./aggregators');
 const { testCasesForData } = require('../test-utils');
 
 
-describe('count', () => {
-    testCasesForData([1, 2, 3, 4])('should return the number of values in the source when given a(n) %s', (type, dataSource) => {
-        const result = aggregators.count(dataSource);
-        expect(result).toBe(4);
-    });
-
-    testCasesForData([])('should return 0 if there are no values in the source when given a(n) %s', (type, dataSource) => {
-        const result = aggregators.count(dataSource);
-        expect(result).toBe(0);
-    });
-});
-
 describe('some', () => {
     testCasesForData([1, 2, 3, 4])('should return true if any value fulfills the predicate when given a(n) %s', (type, dataSource) => {
         const result = aggregators.some(x => x === 2)(dataSource);
