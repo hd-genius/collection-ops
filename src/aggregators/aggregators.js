@@ -26,8 +26,6 @@ exports.none = predicate => source => {
     return true;
 }
 
-exports.sum = (values) => reduce((x, y) => x + y)(0)(values);
-
 exports.every = predicate => source => {
     for (const value of source) {
         if (!predicate(value)) {
