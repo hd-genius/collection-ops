@@ -12,11 +12,4 @@ exports.some = require('./some/some');
 
 exports.none = require('./none/none');
 
-exports.every = predicate => source => {
-    for (const value of source) {
-        if (!predicate(value)) {
-            return false;
-        }
-    }
-    return true;
-}
+exports.every = require('./every/every');
