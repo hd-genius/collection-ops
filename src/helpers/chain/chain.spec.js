@@ -1,6 +1,6 @@
 const { chain } = require('collection-ops');
 
-describe('combineOperators', () => {
+describe('chain', () => {
     it('should create an operator that applies each operator it was given in order', () => {
         const firstOperator = jest.fn();
         const secondOperator = jest.fn();
@@ -14,7 +14,4 @@ describe('combineOperators', () => {
         expect(firstOperator).toHaveBeenCalledWith(initialParameter);
         expect(secondOperator).toHaveBeenCalledWith(firstOperatorResult);
     });
-
-    it.skip('should create a reusable operation', () => {});
-
 });
