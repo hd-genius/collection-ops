@@ -1,15 +1,10 @@
-exports.max = require('./max/max');
-
-exports.min = require('./min/min');
-
-exports.count = require('./count/count');
-
-exports.find = require('./find/find');
-
-exports.reduce = require('./reduce/reduce');
-
-exports.some = require('./some/some');
-
-exports.none = require('./none/none');
-
-exports.every = require('./every/every');
+module.exports = {
+    max: require('./max/max'),
+    min: require('./min/min'),
+    count: require('./count/count'),
+    find: require('./find/find'),
+    reduce: require('./reduce/reduce'),
+    some: require('./some/some'),
+    none: require('./none/none'),
+    every: require('./every/every')
+}
