@@ -4,14 +4,7 @@ exports.min = require('./min/min');
 
 exports.count = require('./count/count');
 
-exports.find = predicate => source => {
-    for (const value of source) {
-        if (predicate(value)) {
-            return value;
-        }
-    }
-    return null;
-}
+exports.find = require('./find/find');
 
 exports.reduce = aggregator => initial => source => {
     let aggregate = initial;
