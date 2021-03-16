@@ -8,14 +8,7 @@ exports.find = require('./find/find');
 
 exports.reduce = require('./reduce/reduce');
 
-exports.some = predicate => source => {
-    for (const value of source) {
-        if (predicate(value)) {
-            return true;
-        }
-    }
-    return false;
-}
+exports.some = require('./some/some');
 
 exports.none = predicate => source => {
     for (const value of source) {
