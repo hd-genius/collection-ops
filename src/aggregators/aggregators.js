@@ -1,9 +1,6 @@
 exports.max = require('./max/max');
 
-exports.min = comparator => {
-    const inverseComparator = x => 0 - comparator(x);
-    return exports.max(inverseComparator);
-}
+exports.min = require('./min/min');
 
 exports.count = function(source) {
     let count = 0;
