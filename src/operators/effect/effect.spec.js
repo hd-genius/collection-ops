@@ -22,4 +22,9 @@ describe('effect', () => {
         expect(sideEffectFunction).not.toBeCalledWith(3);
         expect(sideEffectFunction).not.toBeCalledWith(4);
     });
+
+    testCasesForData([1, 2, 3])('should return an iterable with the same values that it received when given a(n) %s', (type, data) => {
+        const result = effect(x => {})(data);
+        expect(result).toHaveValues(1, 2, 3);
+    });
 });
