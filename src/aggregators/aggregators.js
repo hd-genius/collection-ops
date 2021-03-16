@@ -6,13 +6,7 @@ exports.count = require('./count/count');
 
 exports.find = require('./find/find');
 
-exports.reduce = aggregator => initial => source => {
-    let aggregate = initial;
-    for (const value of source) {
-        aggregate = aggregator(aggregate, value);
-    }
-    return aggregate;
-}
+exports.reduce = require('./reduce/reduce');
 
 exports.some = predicate => source => {
     for (const value of source) {
