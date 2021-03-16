@@ -9,3 +9,4 @@
 
 # 0.6.0
 - changed the results of operations from single run generators to custom iterables that can be repeated
+- removed the sum aggregator
