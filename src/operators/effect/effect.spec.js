@@ -1,9 +1,11 @@
 const { effect } = require('collection-ops');
-const { testCasesForData, testThatTheResultIsReusable } = require('../../test-utils');
+const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../../test-utils');
 
 
 describe('effect', () => {
     testThatTheResultIsReusable(effect(x => {})([1, 2, 3]));
+
+    testThatTheParametersAreNotModified(effect(x => {}), [1, 2, 3]);
 
     testCasesForData([1, 2, 3, 4])('should call the side effect for each value yielded when given a(n) %s', (type, dataSource) => {
         const sideEffectFunction = jest.fn();

@@ -14,13 +14,22 @@ exports.testCasesForData = data => {
 
 // Tests that an iterable can be iterated over multiple times and return the same values
 exports.testThatTheResultIsReusable = result => {
-    test('should produce a result that can be iterated on multiple times', () => {
+    it('should produce a result that can be iterated on multiple times', () => {
         const firstIteration = Array.from(result);
         const secondIteration = Array.from(result);
 
         expect(firstIteration).toEqual(secondIteration);
     });
 };
+
+exports.testThatTheParametersAreNotModified = (operator, ...parameters) => {
+    it('should not modify the data that is passed into it', () => {
+        // Used to achieve a 'deep copy' of the original parameters
+        const originalData = JSON.parse(JSON.stringify(parameters));
+        operator(...parameters);
+        expect(parameters).toEqual(originalData);
+    })
+}
 
 expect.extend({
     toHaveValues(iterable, ...expectedValues) {
