@@ -1,6 +1,6 @@
 const reusable = require("../../helpers/reusable/reusable");
 
-exports.skip = count => reusable(
+module.exports = count => reusable(
         function*(source) {
         let amountToDrop = count;
         for (const value of source) {

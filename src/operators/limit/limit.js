@@ -6,7 +6,7 @@ const reusable = require('../../helpers/reusable/reusable');
  * @param {number} amountToTake
  * @returns {Operator<T>} an Operation that will only yield upto count values
  */
-exports.limit = amountToTake => reusable(
+module.exports = amountToTake => reusable(
     function*(source) {
         let amountLeftToTake = amountToTake;
         for (const value of source) {

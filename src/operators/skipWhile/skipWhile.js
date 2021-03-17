@@ -1,6 +1,6 @@
 const reusable = require("../../helpers/reusable/reusable");
 
-exports.skipWhile = predicate => reusable(
+module.exports = predicate => reusable(
     function*(source) {
         let hasFailed = false;
         for (const value of source) {
