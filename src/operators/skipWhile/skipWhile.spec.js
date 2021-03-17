@@ -9,8 +9,13 @@ describe('skipWhile', () => {
         expect(result).toHaveValues(3, 4);
     });
 
-    testCasesForData([1, 2, 3])('should not emit any values if the predicate never fails', (type, data) => {
+    testCasesForData([1, 2, 3])('should not emit any values if the predicate never fails when given a(n) %s', (type, data) => {
         const result = skipWhile(x => true)(data);
         expect(result).toHaveValues();
+    });
+
+    testCasesForData([1, 2, 3, 4, 5])('should emit all values if the predicate instantly fails when given a(n) %s', (type, data) => {
+        const result = skipWhile(x => false)(data);
+        expect(result).toHaveValues(1, 2, 3, 4, 5);
     });
 });
