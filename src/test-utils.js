@@ -38,18 +38,13 @@ expect.extend({
         let currentStep;
         for(let i = 0; i < expectedValues.length; i++) {
             currentStep = iterator.next();
-            const value = currentStep.value;
             if (currentStep.done) {
-                return {
-                    message: () => `expected ${value} but the iterator was finished`,
-                    pass: false
-                };
+                return failWithMessage(`expected ${expectedValues[i]} but the iterator was finished`);
             } else {
-                if (value !== expectedValues[i]) {
-                    return {
-                        message: () => `expected the value at index ${i} to be ${expectedValues[i]} but received ${value}`,
-                        pass: false
-                    };
+                const actualValue = currentStep.value;
+                const expectedValue = expectedValues[i];
+                if (actualValue !== expectedValue) {
+                    return failWithMessage(`expected the value at index ${i} to be ${expectedValue} but received ${actualValue}`);
                 }
             }
         }
@@ -57,15 +52,24 @@ expect.extend({
         currentStep = iterator.next();
 
         if (currentStep.done) {
-            return {
-                message: () => 'The iterable matched the expected values',
-                pass: true
-            };
+            return passWithMessage('The iterable matched the expected values');
         } else {
-            return {
-                message: () => 'The iterable contained more values than expected',
-                pass: false
-            };
+            return failWithMessage('The iterable contained more values than expected');
         }
     }
 });
+
+function failWithMessage(message) {
+    return result(false, message);
+}
+
+function passWithMessage(message) {
+    return result(true, message);
+}
+
+function result(pass, message) {
+    return {
+        message: () => message,
+        pass
+    };
+}
