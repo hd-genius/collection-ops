@@ -7,7 +7,7 @@ const reusable = require("../../helpers/reusable/reusable");
  * @function sort
  * @template T
  * @param {Comparator<T>} comparator
- * @returns {Operator<T, T>} an Operator that returns values from source in
+ * @returns {Operator<T, T>} an Operator that emits values from source in
  * the order of largest to smallest using comparator.
  */
 module.exports = comparator => reusable(

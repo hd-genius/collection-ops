@@ -104,174 +104,7 @@
     
 
     
-    <h4 class="name" id="combineOperators"><span class="type-signature"></span>combineOperators<span class="signature">(&hellip;operators)</span><span class="type-signature"> &rarr; {<a href="global.html#Operator">Operator</a>}</span></h4>
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>operators</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#Operator">Operator</a></span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                    &lt;repeatable><br>
-                
-                </td>
-            
-
-            
-
-            <td class="description last">an operator to combine</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="operators_combineOperators_combineOperators.js.html">operators/combineOperators/combineOperators.js</a>, <a href="operators_combineOperators_combineOperators.js.html#line5">line 5</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    an Operator that applies each provided operator in order
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="global.html#Operator">Operator</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="distinct"><span class="type-signature"></span>distinct<span class="signature">(source)</span><span class="type-signature"> &rarr; {<a href="global.html#Operator">Operator</a>.&lt;T, T>|Generator.&lt;any, void, *>}</span></h4>
+    <h4 class="name" id="chain"><span class="type-signature"></span>chain<span class="signature">(functions)</span><span class="type-signature"> &rarr; {function}</span></h4>
     
 
     
@@ -311,10 +144,15 @@
 
         <tr>
             
-                <td class="name"><code>source</code></td>
+                <td class="name"><code>functions</code></td>
             
 
             <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
             
             </td>
 
@@ -363,7 +201,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="operators_distinct_distinct.js.html">operators/distinct/distinct.js</a>, <a href="operators_distinct_distinct.js.html#line1">line 1</a>
+        <a href="helpers_chain_chain.js.html">helpers/chain/chain.js</a>, <a href="helpers_chain_chain.js.html#line5">line 5</a>
     </li></ul></dd>
     
 
@@ -389,8 +227,162 @@
 
 
 <h5>Returns:</h5>
-<ul>
-        <li>
+
+        
+<div class="param-desc">
+    a function that applies each provided function in order
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">function</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="distinct"><span class="type-signature"></span>distinct<span class="signature">(source)</span><span class="type-signature"> &rarr; {<a href="global.html#Operator">Operator</a>.&lt;T, T>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    An operator that only returns values from the source iterable once
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>source</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the source iterable</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="operators_distinct_distinct.js.html">operators/distinct/distinct.js</a>, <a href="operators_distinct_distinct.js.html#line3">line 3</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
 
 
 <dl>
@@ -404,24 +396,8 @@
 
     </dd>
 </dl>
-</li>
+
     
-        <li>
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Generator.&lt;any, void, *></span>
-
-
-    </dd>
-</dl>
-</li>
-    </ul>
 
 
 
@@ -439,6 +415,10 @@
     
 
 
+
+<div class="description">
+    A function that produces an operator that does not emit any elements that do not satisfy the predicate
+</div>
 
 
 
@@ -489,7 +469,7 @@
 
             
 
-            <td class="description last">determines if a value from the source iterable will be in the output Generator</td>
+            <td class="description last">determines if a value from the source iterable will be in the output Iterable</td>
         </tr>
 
     
@@ -530,7 +510,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="operators_filter_filter.js.html">operators/filter/filter.js</a>, <a href="operators_filter_filter.js.html#line1">line 1</a>
+        <a href="operators_filter_filter.js.html">operators/filter/filter.js</a>, <a href="operators_filter_filter.js.html#line3">line 3</a>
     </li></ul></dd>
     
 
@@ -560,6 +540,165 @@
         
 <div class="param-desc">
     a new filter operation that uses predicate
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="global.html#Operator">Operator</a>.&lt;T, T></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="limit"><span class="type-signature"></span>limit<span class="signature">(amountToTake)</span><span class="type-signature"> &rarr; {<a href="global.html#Operator">Operator</a>.&lt;T, T>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    A function that produces an Operator that limits the number of values emitted
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>amountToTake</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the maximum number of values that should be emitted</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="operators_limit_limit.js.html">operators/limit/limit.js</a>, <a href="operators_limit_limit.js.html#line3">line 3</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    an Operation that will only yield upto count values
 </div>
 
 
@@ -685,7 +824,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="operators_map_map.js.html">operators/map/map.js</a>, <a href="operators_map_map.js.html#line1">line 1</a>
+        <a href="operators_map_map.js.html">operators/map/map.js</a>, <a href="operators_map_map.js.html#line3">line 3</a>
     </li></ul></dd>
     
 
@@ -726,161 +865,6 @@
     <dd>
         
 <span class="param-type"><a href="global.html#Operator">Operator</a>.&lt;T, U></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="max"><span class="type-signature"></span>max<span class="signature">(comparator)</span><span class="type-signature"> &rarr; {<a href="global.html#Aggregator">Aggregator</a>.&lt;T, T>}</span></h4>
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>comparator</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#Comparator">Comparator</a>.&lt;T></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">the comparator used to find the largest value</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="aggregators_aggregators.js.html">aggregators/aggregators.js</a>, <a href="aggregators_aggregators.js.html#line27">line 27</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    an Aggregator that finds the largest value in the source
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="global.html#Aggregator">Aggregator</a>.&lt;T, T></span>
 
 
     </dd>
@@ -999,7 +983,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="operators_sort_sort.js.html">operators/sort/sort.js</a>, <a href="operators_sort_sort.js.html#line1">line 1</a>
+        <a href="operators_sort_sort.js.html">operators/sort/sort.js</a>, <a href="operators_sort_sort.js.html#line3">line 3</a>
     </li></ul></dd>
     
 
@@ -1028,7 +1012,7 @@
 
         
 <div class="param-desc">
-    an Operator that returns values from source inthe order of largest to smallest using comparator.
+    an Operator that emits values from source inthe order of largest to smallest using comparator.
 </div>
 
 
@@ -1057,162 +1041,7 @@
     
 
     
-    <h4 class="name" id="take"><span class="type-signature"></span>take<span class="signature">(amountToTake)</span><span class="type-signature"> &rarr; {<a href="global.html#Operator">Operator</a>.&lt;T>}</span></h4>
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>amountToTake</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="operators_take_take.js.html">operators/take/take.js</a>, <a href="operators_take_take.js.html#line1">line 1</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    an Operation that will only yield upto count values
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="global.html#Operator">Operator</a>.&lt;T></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="takeWhile"><span class="type-signature"></span>takeWhile<span class="signature">(predicate)</span><span class="type-signature"> &rarr; {<a href="global.html#Operator">Operator</a>.&lt;T>}</span></h4>
+    <h4 class="name" id="takeWhile"><span class="type-signature"></span>takeWhile<span class="signature">(predicate)</span><span class="type-signature"> &rarr; {<a href="global.html#Operator">Operator</a>.&lt;T, T>}</span></h4>
     
 
     
@@ -1309,7 +1138,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="operators_takeWhile_takeWhile.js.html">operators/takeWhile/takeWhile.js</a>, <a href="operators_takeWhile_takeWhile.js.html#line1">line 1</a>
+        <a href="operators_takeWhile_takeWhile.js.html">operators/takeWhile/takeWhile.js</a>, <a href="operators_takeWhile_takeWhile.js.html#line3">line 3</a>
     </li></ul></dd>
     
 
@@ -1338,7 +1167,7 @@
 
         
 <div class="param-desc">
-    a generator that will emit values until a value does not fulfill the predicate
+    an Operator that will emit values until a value in the source iterable does not fulfill the predicate
 </div>
 
 
@@ -1349,7 +1178,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="global.html#Operator">Operator</a>.&lt;T></span>
+<span class="param-type"><a href="global.html#Operator">Operator</a>.&lt;T, T></span>
 
 
     </dd>
@@ -1474,7 +1303,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="aggregators_aggregators.js.html">aggregators/aggregators.js</a>, <a href="aggregators_aggregators.js.html#line1">line 1</a>
+        <a href="types.js.html">types.js</a>, <a href="types.js.html#line24">line 24</a>
     </li></ul></dd>
     
 
@@ -1503,7 +1332,7 @@
 
         
 <div class="param-desc">
-    a single value that is the result of aggregating a source
+    a single value that is the result of aggregating a source iterable
 </div>
 
 
@@ -1656,7 +1485,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="aggregators_aggregators.js.html">aggregators/aggregators.js</a>, <a href="aggregators_aggregators.js.html#line10">line 10</a>
+        <a href="types.js.html">types.js</a>, <a href="types.js.html#line33">line 33</a>
     </li></ul></dd>
     
 
@@ -1869,7 +1698,7 @@
     
 
     
-    <h4 class="name" id="Operator"><span class="type-signature"></span>Operator<span class="signature">(source)</span><span class="type-signature"> &rarr; {Generator.&lt;U>}</span></h4>
+    <h4 class="name" id="Operator"><span class="type-signature"></span>Operator<span class="signature">(source)</span><span class="type-signature"> &rarr; {Iterable.&lt;U>}</span></h4>
     
 
     
@@ -1877,7 +1706,7 @@
 
 
 <div class="description">
-    A function that takes an iterable and produces a Generator that that returns values after an operation has been applied the values in the source iterable
+    A function that takes an Iterable and produces a Iterable that that returns values after an operation has been applied the values in the source iterable
 </div>
 
 
@@ -2010,7 +1839,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Generator.&lt;U></span>
+<span class="param-type">Iterable.&lt;U></span>
 
 
     </dd>
@@ -2195,13 +2024,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#combineOperators">combineOperators</a></li><li><a href="global.html#distinct">distinct</a></li><li><a href="global.html#filter">filter</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#sort">sort</a></li><li><a href="global.html#take">take</a></li><li><a href="global.html#takeWhile">takeWhile</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#chain">chain</a></li><li><a href="global.html#distinct">distinct</a></li><li><a href="global.html#filter">filter</a></li><li><a href="global.html#limit">limit</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#sort">sort</a></li><li><a href="global.html#takeWhile">takeWhile</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Sun Oct 11 2020 00:40:58 GMT-0400 (Eastern Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Fri Mar 19 2021 06:52:17 GMT-0400 (Eastern Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

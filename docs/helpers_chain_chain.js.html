@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: operators/distinct/distinct.js</title>
+    <title>JSDoc: Source: helpers/chain/chain.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: operators/distinct/distinct.js</h1>
+    <h1 class="page-title">Source: helpers/chain/chain.js</h1>
 
     
 
@@ -26,26 +26,18 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>const reusable = require("../../helpers/reusable/reusable");
+            <pre class="prettyprint source linenums"><code>function chainOperators(first, second) {
+    return source => second(first(source));
+}
 
 /**
- * An operator that only returns values from the source iterable once
- * @function distinct
- * @template T
- * @type Operator&lt;T, T>
- * @param source the source iterable
+ * @function chain
+ * @param {Function} functions
+ * @returns {Function} a function that applies each provided function in order
  */
-function* distinct(source) {
-    let previousValues = new Set();
-    for (const value of source) {
-        if (!previousValues.has(value)) {
-            previousValues.add(value);
-            yield value;
-        }
-    }
+module.exports = function(...functions) {
+    return functions.reduce(chainOperators);
 };
-
-module.exports = reusable(distinct);
 </code></pre>
         </article>
     </section>

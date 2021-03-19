@@ -4,8 +4,8 @@ function chainOperators(first, second) {
 
 /**
  * @function chain
- * @param functions
- * @returns  an function that applies each provided function in order
+ * @param {Function} functions
+ * @returns {Function} a function that applies each provided function in order
  */
 module.exports = function(...functions) {
     return functions.reduce(chainOperators);

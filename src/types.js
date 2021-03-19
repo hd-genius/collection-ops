@@ -14,11 +14,11 @@
  */
 
 /**
- * A function that takes an iterable and produces a Generator that that returns values after an operation has been applied the values in the source iterable
+ * A function that takes an Iterable and produces a Iterable that that returns values after an operation has been applied the values in the source iterable
  * @callback Operator
  * @template T, U
  * @param {Iterable<T>} source - the source iterable to be operated on
- * @return {Generator<U>} the values from the source after the operation has been applied
+ * @return {Iterable<U>} the values from the source after the operation has been applied
  */
 
 /**
@@ -27,7 +27,7 @@
  * @callback Aggregator
  * @template T, U
  * @param {Iterable<T>} source an iterable to be aggregated
- * @returns {U} a single value that is the result of aggregating a source
+ * @returns {U} a single value that is the result of aggregating a source iterable
  */
 
 /**

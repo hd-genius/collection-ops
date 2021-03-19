@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: operators/distinct/distinct.js</title>
+    <title>JSDoc: Source: aggregators/max/max.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: operators/distinct/distinct.js</h1>
+    <h1 class="page-title">Source: aggregators/max/max.js</h1>
 
     
 
@@ -26,27 +26,25 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>const reusable = require("../../helpers/reusable/reusable");
-
-/**
- * An operator that only returns values from the source iterable once
- * @function distinct
+            <pre class="prettyprint source linenums"><code>/**
+ * @function
  * @template T
- * @type Operator&lt;T, T>
- * @param source the source iterable
+ * @param {Comparator&lt;T>} comparator the comparator used to find the largest value
+ * @returns {Aggregator&lt;T, T>} an Aggregator that finds the largest value in the source
  */
-function* distinct(source) {
-    let previousValues = new Set();
+ module.exports = comparator => source => {
+    let isFirstValue = true;
+    let currentMax;
     for (const value of source) {
-        if (!previousValues.has(value)) {
-            previousValues.add(value);
-            yield value;
+        if (isFirstValue) {
+            currentMax = value;
+            isFirstValue = false;
+        } else if (comparator(currentMax, value) &lt; 0) {
+            currentMax = value;
         }
     }
-};
-
-module.exports = reusable(distinct);
-</code></pre>
+    return currentMax;
+}</code></pre>
         </article>
     </section>
 
