@@ -36,13 +36,12 @@ expect.extend({
         const iterator = iterable[Symbol.iterator]();
 
         let currentStep;
-        for(let i = 0; i < expectedValues.length; i++) {
-            currentStep = iterator.next();
+        for(let i = 0, currentStep = iterator.next(); i < expectedValues.length; i++, currentStep = iterator.next()) {
+            const expectedValue = expectedValues[i];
             if (currentStep.done) {
-                return failWithMessage(`expected ${expectedValues[i]} but the iterator was finished`);
+                return failWithMessage(`expected ${expectedValue} but the iterator was finished`);
             } else {
                 const actualValue = currentStep.value;
-                const expectedValue = expectedValues[i];
                 if (actualValue !== expectedValue) {
                     return failWithMessage(`expected the value at index ${i} to be ${expectedValue} but received ${actualValue}`);
                 }
