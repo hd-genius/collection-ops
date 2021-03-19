@@ -4,7 +4,7 @@ function chainOperators(first, second) {
 
 /**
  * @function chain
- * @param {Function} functions
+ * @param {...Function} functions
  * @returns {Function} a function that applies each provided function in order
  */
 module.exports = function(...functions) {
