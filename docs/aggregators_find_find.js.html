@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: helpers/chain/chain.js</title>
+    <title>JSDoc: Source: aggregators/find/find.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: helpers/chain/chain.js</h1>
+    <h1 class="page-title">Source: aggregators/find/find.js</h1>
 
     
 
@@ -26,18 +26,20 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>function chainOperators(first, second) {
-    return source => second(first(source));
-}
-
-/**
- * @function chain
- * @param {...Function} functions
- * @returns {Function} a function that applies each provided function in order
+            <pre class="prettyprint source linenums"><code>/**
+ * @function find
+ * @template T
+ * @param {Predicate&lt;T>} predicate A Predicate function to check values against
+ * @return {Aggregator&lt;T, T>} An aggregator that returns the first value in an iterable that satisfies the predicate
  */
-module.exports = function(...functions) {
-    return functions.reduce(chainOperators);
-};
+module.exports = predicate => source => {
+    for (const value of source) {
+        if (predicate(value)) {
+            return value;
+        }
+    }
+    return null;
+}
 </code></pre>
         </article>
     </section>

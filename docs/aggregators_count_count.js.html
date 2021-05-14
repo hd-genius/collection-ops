@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: helpers/chain/chain.js</title>
+    <title>JSDoc: Source: aggregators/count/count.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: helpers/chain/chain.js</h1>
+    <h1 class="page-title">Source: aggregators/count/count.js</h1>
 
     
 
@@ -26,19 +26,19 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>function chainOperators(first, second) {
-    return source => second(first(source));
-}
-
-/**
- * @function chain
- * @param {...Function} functions
- * @returns {Function} a function that applies each provided function in order
+            <pre class="prettyprint source linenums"><code>/**
+ * @function count
+ * @template T
+ * @param {Iterable&lt;T>} source The iterable to count
+ * @return {number} The number of elements in the source
  */
-module.exports = function(...functions) {
-    return functions.reduce(chainOperators);
-};
-</code></pre>
+module.exports = function(source) {
+    let count = 0;
+    for (const value of source) {
+        count++;
+    }
+    return count;
+}</code></pre>
         </article>
     </section>
 
