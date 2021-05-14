@@ -27,7 +27,7 @@
     "type": "git",
     "url": "https://github.com/roy-stewart/CollectionOps.git"
   },
-  "engines" : {
-    "node" : ">=0.12"
+  "engines": {
+    "node": ">=0.12"
   }
 }
