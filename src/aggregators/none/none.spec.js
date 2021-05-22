@@ -13,7 +13,7 @@ describe('none', () => {
         expect(result).toBeTruthy();
     });
 
-    testCasesForData([1, 2, 3, 4])('should return true if there are no values in the source when given a(n) %s', (type, dataSource) => {
+    testCasesForData([])('should return true if there are no values in the source when given a(n) %s', (type, dataSource) => {
         const result = none(x => x === 5)(dataSource);
         expect(result).toBeTruthy();
     });
