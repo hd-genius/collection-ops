@@ -1,4 +1,4 @@
-const reusable = require("../../helpers/reusable/reusable");
+const reusable = require('../../helpers/reusable/reusable');
 
 /**
  * An operator that only returns values from the source iterable once
@@ -7,14 +7,14 @@ const reusable = require("../../helpers/reusable/reusable");
  * @type Operator<T, T>
  * @param source the source iterable
  */
-function* distinct(source) {
-    let previousValues = new Set();
-    for (const value of source) {
-        if (!previousValues.has(value)) {
-            previousValues.add(value);
-            yield value;
+module.exports = reusable(
+    function *(source) {
+        let previousValues = new Set();
+        for (const value of source) {
+            if (!previousValues.has(value)) {
+                previousValues.add(value);
+                yield value;
+            }
         }
     }
-};
-
-module.exports = reusable(distinct);
+);

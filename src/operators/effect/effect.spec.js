@@ -3,9 +3,9 @@ const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreN
 
 
 describe('effect', () => {
-    testThatTheResultIsReusable(effect(x => {})([1, 2, 3]));
+    testThatTheResultIsReusable(effect(() => {})([1, 2, 3]));
 
-    testThatTheParametersAreNotModified(effect(x => {}), [1, 2, 3]);
+    testThatTheParametersAreNotModified(effect(() => {}), [1, 2, 3]);
 
     testCasesForData([1, 2, 3, 4])('should call the side effect for each value yielded when given a(n) %s', (type, dataSource) => {
         const sideEffectFunction = jest.fn();
@@ -26,7 +26,7 @@ describe('effect', () => {
     });
 
     testCasesForData([1, 2, 3])('should return an iterable with the same values that it received when given a(n) %s', (type, data) => {
-        const result = effect(x => {})(data);
+        const result = effect(() => {})(data);
         expect(result).toHaveValues(1, 2, 3);
     });
 });

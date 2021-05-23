@@ -11,4 +11,4 @@ module.exports = predicate => source => {
         }
     }
     return null;
-}
+};

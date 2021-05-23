@@ -5,7 +5,7 @@ function isIterable(value) {
 }
 
 module.exports = reusable(
-    function*(source) {
+    function *(source) {
         for (const value of source) {
             if (isIterable(value)) {
                 yield* value;

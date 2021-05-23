@@ -14,7 +14,8 @@
  */
 
 /**
- * A function that takes an Iterable and produces a Iterable that that returns values after an operation has been applied the values in the source iterable
+ * A function that takes an Iterable and produces a Iterable that that returns values
+ * after an operation has been applied the values in the source iterable
  * @callback Operator
  * @template T, U
  * @param {Iterable<T>} source - the source iterable to be operated on

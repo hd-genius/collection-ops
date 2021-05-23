@@ -4,7 +4,7 @@
  * @param {Comparator<T>} comparator the comparator used to find the largest value
  * @returns {Aggregator<T, T>} an Aggregator that finds the largest value in the source
  */
- module.exports = comparator => source => {
+module.exports = comparator => source => {
     let isFirstValue = true;
     let currentMax;
     for (const value of source) {
@@ -16,4 +16,4 @@
         }
     }
     return currentMax;
-}
+};

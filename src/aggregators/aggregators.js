@@ -7,4 +7,4 @@ module.exports = {
     some: require('./some/some'),
     none: require('./none/none'),
     every: require('./every/every')
-}
+};

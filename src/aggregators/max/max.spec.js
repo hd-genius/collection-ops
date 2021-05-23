@@ -15,6 +15,6 @@ describe('max', () => {
 
     testCasesForData([])('should return undefined if there are no values in the source when given a(n) %s', (type, dataSource) => {
         const result = max((a, b) => a - b)(dataSource);
-        expect(result).toBe(undefined);
+        expect(result).toBeUndefined();
     });
 });

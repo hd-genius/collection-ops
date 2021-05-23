@@ -1,5 +1,5 @@
 const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../../test-utils');
-const { map } = require('collection-ops')
+const { map } = require('collection-ops');
 
 describe('map', () => {
     testThatTheResultIsReusable(map(val => val * 2)([1, 2, 3]));

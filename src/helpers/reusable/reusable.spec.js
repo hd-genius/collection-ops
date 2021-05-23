@@ -1,11 +1,10 @@
-const { reusable } = require("collection-ops");
+const { reusable } = require('collection-ops');
 
 describe('reusable', () => {
-
-    function* testGenerator() {
+    function *testGenerator() {
         yield 1;
         yield 2;
-        yield 3
+        yield 3;
     }
 
     it('should fetch the iterator from the factory each time an iterator is requested', () => {
@@ -20,5 +19,5 @@ describe('reusable', () => {
         expect(secondIterator.next().value).toBe(1);
         expect(secondIterator.next().value).toBe(2);
         expect(secondIterator.next().value).toBe(3);
-    })
-})
+    });
+});

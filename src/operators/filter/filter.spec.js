@@ -8,7 +8,7 @@ describe('filter', () => {
     testThatTheParametersAreNotModified(filter(x => x < 3), [1, 2, 3]);
 
     testCasesForData([1, 2, 3])('should not yield any values that do not meet the predicate when given a(n) %s', (type, dataSource) => {
-        const result = filter(val => val % 2 == 0)(dataSource);
+        const result = filter(val => val % 2 === 0)(dataSource);
         expect(result).toHaveValues(2);
     });
 

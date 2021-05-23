@@ -1,4 +1,4 @@
-const reusable = require("../../helpers/reusable/reusable");
+const reusable = require('../../helpers/reusable/reusable');
 
 /**
  * Cannot be used with infinite collections, it will cause an infinite loop.
@@ -6,12 +6,12 @@ const reusable = require("../../helpers/reusable/reusable");
  * immediately but are sorted only as requested.
  * @function sort
  * @template T
- * @param {Comparator<T>} comparator
+ * @param {Comparator<T>} comparator the comparator used to determine the item order in the result
  * @returns {Operator<T, T>} an Operator that emits values from source in
  * the order of largest to smallest using comparator.
  */
 module.exports = comparator => reusable(
-    function*(source) {
+    function *(source) {
         let remainingValues = Array.from(source);
         while (remainingValues.length > 0) {
             for (let index = remainingValues.length; index > 0; index--) {

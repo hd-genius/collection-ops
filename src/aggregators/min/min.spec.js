@@ -15,6 +15,6 @@ describe('min', () => {
 
     testCasesForData([])('should return undefined if there are no values in the source when given a(n) %s', (type, dataSource) => {
         const result = min((a, b) => a - b)(dataSource);
-        expect(result).toBe(undefined);
+        expect(result).toBeUndefined();
     });
 });

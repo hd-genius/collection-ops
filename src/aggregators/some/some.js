@@ -5,4 +5,4 @@ module.exports = predicate => source => {
         }
     }
     return false;
-}
+};

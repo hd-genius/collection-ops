@@ -4,4 +4,4 @@ module.exports = aggregator => initial => source => {
         aggregate = aggregator(aggregate, value);
     }
     return aggregate;
-}
+};

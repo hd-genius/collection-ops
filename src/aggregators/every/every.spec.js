@@ -3,7 +3,7 @@ const { testCasesForData } = require('../../test-utils');
 
 describe('every', () => {
     testCasesForData([1, 2, 3])('should return true if every item in an %s passes the given predicate', (type, dataSource) => {
-        const result = every(x => true)(dataSource);
+        const result = every(() => true)(dataSource);
         expect(result).toBeTruthy();
     });
 
@@ -13,7 +13,7 @@ describe('every', () => {
     });
 
     testCasesForData([])('should return true if there are no items in an $s', (type, dataSource) => {
-        const result = every(x => false)(dataSource);
+        const result = every(() => false)(dataSource);
         expect(result).toBeTruthy();
     });
 });

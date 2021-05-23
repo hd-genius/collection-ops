@@ -8,7 +8,7 @@ const reusable = require('../../helpers/reusable/reusable');
  * @returns {Operator<T, T>} an Operation that will only yield upto count values
  */
 module.exports = amountToTake => reusable(
-    function*(source) {
+    function *(source) {
         let amountLeftToTake = amountToTake;
         for (const value of source) {
             if (amountLeftToTake > 0) {
