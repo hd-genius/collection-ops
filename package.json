@@ -9,6 +9,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "jest",
+    "code-check": "eslint src",
     "docs": "jsdoc -R README.md -r src -d docs"
   },
   "keywords": [
@@ -20,6 +21,8 @@
   "license": "MIT",
   "jest": {},
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.27.0",
     "jest": "^26.6.3",
     "jsdoc": "^3.6.6"
   },
