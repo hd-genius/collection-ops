@@ -18,7 +18,6 @@
         "prettier/prettier": "error",
         //Possible Errors
         // The following rules point out areas where you might have made mistakes.
-        "comma-dangle": 2, // disallow or enforce trailing commas
         "no-cond-assign": 2, // disallow assignment in conditional expressions
         "no-console": 1, // disallow use of console (off by default in the node environment)
         "no-constant-condition": 2, // disallow use of constant expressions in conditions
@@ -158,7 +157,6 @@
         "wrap-regex": 0, // require regex literals to be wrapped in parentheses (off by default)
 
         "no-var": 2, // require let or const instead of var (off by default)
-        "generator-star-spacing": [2, "before"], // enforce the spacing around the * in generator functions (off by default)
 
         "max-depth": [2, 3], // specify the maximum depth that blocks can be nested (off by default)
         "max-len": [2, 125, 2, { "ignorePattern": "testCasesForData" }], // specify the maximum length of a line in your program (off by default)
