@@ -1,5 +1,6 @@
 {
     "parser": "babel-eslint",
+    "extends": ["plugin:prettier/recommended"],
     "env": {
         "browser": true,
         "node": true,
@@ -11,7 +12,10 @@
         "jest": "readonly",
         "expect": "readonly"
     },
+    "plugins": ["prettier"],
     "rules": {
+        // Code formatting
+        "prettier/prettier": "error",
         //Possible Errors
         // The following rules point out areas where you might have made mistakes.
         "comma-dangle": 2, // disallow or enforce trailing commas
