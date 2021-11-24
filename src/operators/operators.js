@@ -9,5 +9,5 @@ module.exports = {
     effect: require('./effect/effect'),
     takeWhile: require('./takeWhile/takeWhile'),
     concat: require('./concat/concat'),
-    skipWhile: require('./skipWhile/skipWhile')
+    skipWhile: require('./skipWhile/skipWhile'),
 };

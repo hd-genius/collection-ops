@@ -6,5 +6,5 @@ module.exports = {
     reduce: require('./reduce/reduce'),
     some: require('./some/some'),
     none: require('./none/none'),
-    every: require('./every/every')
+    every: require('./every/every'),
 };

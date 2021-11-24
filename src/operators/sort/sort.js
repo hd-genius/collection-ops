@@ -10,8 +10,8 @@ const reusable = require('../../helpers/reusable/reusable');
  * @returns {Operator<T, T>} an Operator that emits values from source in
  * the order of largest to smallest using comparator.
  */
-module.exports = comparator => reusable(
-    function *(source) {
+module.exports = (comparator) =>
+    reusable(function* (source) {
         let remainingValues = Array.from(source);
         while (remainingValues.length > 0) {
             for (let index = remainingValues.length; index > 0; index--) {
@@ -25,5 +25,4 @@ module.exports = comparator => reusable(
             }
             yield remainingValues.shift();
         }
-    }
-);
+    });

@@ -1,5 +1,5 @@
 function chainOperators(first, second) {
-    return source => second(first(source));
+    return (source) => second(first(source));
 }
 
 /**

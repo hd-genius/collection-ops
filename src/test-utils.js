@@ -1,6 +1,6 @@
 // Creates test cases for the different data types
-exports.testCasesForData = data => {
-    function *exampleGenerator() {
+exports.testCasesForData = (data) => {
+    function* exampleGenerator() {
         for (const value of data) {
             yield value;
         }
@@ -8,12 +8,12 @@ exports.testCasesForData = data => {
     return it.each([
         ['Array', Array.from(data)],
         ['Set', new Set(data)],
-        ['Generator', exampleGenerator()]
+        ['Generator', exampleGenerator()],
     ]);
 };
 
 // Tests that an iterable can be iterated over multiple times and return the same values
-exports.testThatTheResultIsReusable = result => {
+exports.testThatTheResultIsReusable = (result) => {
     it('should produce a result that can be iterated on multiple times', () => {
         const firstIteration = Array.from(result);
         const secondIteration = Array.from(result);
@@ -36,7 +36,7 @@ expect.extend({
         const iterator = iterable[Symbol.iterator]();
 
         let currentStep = iterator.next();
-        for(let i = 0; i < expectedValues.length; i++, currentStep = iterator.next()) {
+        for (let i = 0; i < expectedValues.length; i++, currentStep = iterator.next()) {
             const expectedValue = expectedValues[i];
             if (currentStep.done) {
                 return failWithMessage(`expected ${expectedValue} but the iterator was finished`);
@@ -44,7 +44,8 @@ expect.extend({
                 const actualValue = currentStep.value;
                 if (actualValue !== expectedValue) {
                     return failWithMessage(
-                        `expected the value at index ${i} to be ${expectedValue} but received ${actualValue}`);
+                        `expected the value at index ${i} to be ${expectedValue} but received ${actualValue}`
+                    );
                 }
             }
         }
@@ -56,13 +57,13 @@ expect.extend({
         } else {
             return failWithMessage('The iterable contained more values than expected');
         }
-    }
+    },
 });
 
 function assertionResult(pass, message) {
     return {
         message: () => message,
-        pass
+        pass,
     };
 }
 

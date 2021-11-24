@@ -7,8 +7,8 @@ const reusable = require('../../helpers/reusable/reusable');
  * @param {number} amountToTake the maximum number of values that should be emitted
  * @returns {Operator<T, T>} an Operation that will only yield upto count values
  */
-module.exports = amountToTake => reusable(
-    function *(source) {
+module.exports = (amountToTake) =>
+    reusable(function* (source) {
         let amountLeftToTake = amountToTake;
         for (const value of source) {
             if (amountLeftToTake > 0) {
@@ -18,5 +18,4 @@ module.exports = amountToTake => reusable(
             }
             amountLeftToTake--;
         }
-    }
-);
+    });

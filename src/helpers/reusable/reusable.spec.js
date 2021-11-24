@@ -1,7 +1,7 @@
 const { reusable } = require('collection-ops');
 
 describe('reusable', () => {
-    function *testGenerator() {
+    function* testGenerator() {
         yield 1;
         yield 2;
         yield 3;

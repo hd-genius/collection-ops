@@ -8,8 +8,8 @@ const reusable = require('../../helpers/reusable/reusable');
  * @returns {Operator<T, T>} an Operator that will emit values until a value in the source iterable does not fulfill the
  * predicate
  */
-module.exports = predicate => reusable(
-    function *(source) {
+module.exports = (predicate) =>
+    reusable(function* (source) {
         for (const value of source) {
             if (predicate(value)) {
                 yield value;
@@ -17,5 +17,4 @@ module.exports = predicate => reusable(
                 break;
             }
         }
-    }
-);
+    });

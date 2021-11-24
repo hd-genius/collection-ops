@@ -1,5 +1,9 @@
 const { distinct } = require('collection-ops');
-const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../../test-utils');
+const {
+    testCasesForData,
+    testThatTheResultIsReusable,
+    testThatTheParametersAreNotModified,
+} = require('../../test-utils');
 
 describe('distinct', () => {
     testThatTheResultIsReusable(distinct([1, 1, 2, 2, 3]));
@@ -11,8 +15,11 @@ describe('distinct', () => {
         expect(result).toHaveValues(1, 2, 3);
     });
 
-    testCasesForData([1, 2, 1, 3, 3, 2])('should return each value in the order that they are first found', (type, data) => {
-        const result = distinct(data);
-        expect(result).toHaveValues(1, 2, 3);
-    });
+    testCasesForData([1, 2, 1, 3, 3, 2])(
+        'should return each value in the order that they are first found',
+        (type, data) => {
+            const result = distinct(data);
+            expect(result).toHaveValues(1, 2, 3);
+        }
+    );
 });
