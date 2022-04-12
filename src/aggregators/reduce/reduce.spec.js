@@ -7,4 +7,9 @@ describe('reduce', () => {
         const result = reduce((a, b) => a + b)(initialValue)(dataSource);
         expect(result).toEqual(initialValue);
     });
+
+    testCasesForData([1, 2, 3])('should return the reduced value when given a %s', (type, dataSource) => {
+        const result = reduce((a, b) => a + b)(0)(dataSource);
+        expect(result).toEqual(6);
+    });
 });
