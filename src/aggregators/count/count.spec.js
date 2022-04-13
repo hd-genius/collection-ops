@@ -1,7 +1,9 @@
 const { count } = require('collection-ops');
-const { testCasesForData } = require('../../test-utils');
+const { testCasesForData, testThatTheResultIsReusable } = require('../../test-utils');
 
 describe('count', () => {
+    testThatTheResultIsReusable(count([1, 2, 3]));
+
     testCasesForData([1, 2, 3, 4])(
         'should return the number of values in the source when given a(n) %s',
         (type, dataSource) => {
