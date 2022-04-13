@@ -2,8 +2,6 @@ const { count } = require('collection-ops');
 const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../../test-utils');
 
 describe('count', () => {
-    testThatTheResultIsReusable(count([1, 2, 3]));
-
     testThatTheParametersAreNotModified(count, [1, 2, 3]);
 
     testCasesForData([1, 2, 3, 4])(
