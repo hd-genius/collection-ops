@@ -1,4 +1,8 @@
-// Creates test cases for the different data types
+/**
+ * Creates test cases for the different data types
+ * @param {*} data the data set to be tested
+ * @returns 
+ */
 exports.testCasesForData = (data) => {
     function* exampleGenerator() {
         for (const value of data) {
@@ -12,7 +16,10 @@ exports.testCasesForData = (data) => {
     ]);
 };
 
-// Tests that an iterable can be iterated over multiple times and return the same values
+/**
+ * Tests that an iterable can be iterated over multiple times and return the same values
+ * @param {*} result the result of applying an operator
+ */
 exports.testThatTheResultIsReusable = (result) => {
     it('should produce a result that can be iterated on multiple times', () => {
         const firstIteration = Array.from(result);
@@ -22,6 +29,11 @@ exports.testThatTheResultIsReusable = (result) => {
     });
 };
 
+/**
+ * Tests that the parameters are not modified after being passed through the operator
+ * @param {*} operator the operator to test
+ * @param  {...any} parameters the parameters to pass to the operator
+ */
 exports.testThatTheParametersAreNotModified = (operator, ...parameters) => {
     it('should not modify the data that is passed into it', () => {
         // Used to achieve a 'deep copy' of the original parameters
