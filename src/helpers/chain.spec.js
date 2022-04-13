@@ -14,4 +14,15 @@ describe('chain', () => {
         expect(firstOperator).toHaveBeenCalledWith(initialParameter);
         expect(secondOperator).toHaveBeenCalledWith(firstOperatorResult);
     });
+
+    it('should return the result from the last operator it was given', () => {
+        const lastOperator = jest.fn();
+        const combined = chain(() => ["Test return"], lastOperator);
+
+        const expectedResult = ["Some value"];
+        lastOperator.mockReturnValue(expectedResult);
+        result = combined(["Some input"]);
+
+        expect(result).toEqual(expectedResult);
+    });
 });
