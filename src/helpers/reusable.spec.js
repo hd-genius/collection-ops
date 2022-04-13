@@ -1,4 +1,4 @@
-const { reusable } = require('collection-ops');
+const reusable = require('./reusable');
 
 describe('reusable', () => {
     function* testGenerator() {
