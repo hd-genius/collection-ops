@@ -1,5 +1,5 @@
 module.exports = {
-    ...require('./operators/operators'),
-    ...require('./aggregators/aggregators'),
-    ...require('./helpers/helpers'),
+    ...require('./operators'),
+    ...require('./aggregators'),
+    ...require('./helpers'),
 };
