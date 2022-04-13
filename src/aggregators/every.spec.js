@@ -1,5 +1,5 @@
 const { every } = require('collection-ops');
-const { testCasesForData } = require('../../test-utils');
+const { testCasesForData } = require('../test-utils');
 
 describe('every', () => {
     testCasesForData([1, 2, 3])(

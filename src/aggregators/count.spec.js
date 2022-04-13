@@ -1,5 +1,5 @@
 const { count } = require('collection-ops');
-const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../../test-utils');
+const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../test-utils');
 
 describe('count', () => {
     testThatTheParametersAreNotModified(count, [1, 2, 3]);

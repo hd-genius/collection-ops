@@ -1,5 +1,5 @@
 const { reduce } = require('collection-ops');
-const { testCasesForData } = require('../../test-utils');
+const { testCasesForData } = require('../test-utils');
 
 describe('reduce', () => {
     testCasesForData([])('should return the initial value if there are no values in the %s', (type, dataSource) => {
