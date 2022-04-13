@@ -1,4 +1,4 @@
-const reusable = require('../../helpers/reusable/reusable');
+const { reusable } = require('../../helpers');
 
 /**
  * A function that produces an Operator that limits the number of values emitted

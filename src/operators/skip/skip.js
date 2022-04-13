@@ -1,4 +1,4 @@
-const reusable = require('../../helpers/reusable/reusable');
+const { reusable } = require('../../helpers');
 
 module.exports = (count) =>
     reusable(function* (source) {

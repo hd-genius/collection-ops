@@ -1,4 +1,4 @@
-const reusable = require('../../helpers/reusable/reusable');
+const { reusable } = require('../../helpers');
 
 /**
  * An operator that only returns values from the source iterable once

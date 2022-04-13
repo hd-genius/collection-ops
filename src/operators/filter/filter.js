@@ -1,4 +1,4 @@
-const reusable = require('../../helpers/reusable/reusable');
+const { reusable } = require('../../helpers');
 
 /**
  * A function that produces an operator that does not emit any elements that do not satisfy the predicate
