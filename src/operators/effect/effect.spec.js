@@ -32,6 +32,7 @@ describe('effect', () => {
             sourceWithSideEffect.next();
             sourceWithSideEffect.next();
 
+            expect(sideEffectFunction).toBeCalledTimes(2);
             expect(sideEffectFunction).not.toBeCalledWith(3);
             expect(sideEffectFunction).not.toBeCalledWith(4);
         }
