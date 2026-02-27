@@ -10,7 +10,7 @@
   "scripts": {
     "test": "jest",
     "code-check": "eslint src",
-    "docs": "jsdoc -R README.md -r src -d docs"
+    "docs": "jsdoc -R README.md -r src -d _site"
   },
   "keywords": [
     "functional programming",
