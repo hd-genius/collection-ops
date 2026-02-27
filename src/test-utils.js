@@ -1,4 +1,9 @@
 /**
+ * @module
+ * @ignore
+ */
+
+/**
  * Creates test cases for the different data types
  * @param {*} data the data set to be tested
  * @returns {*} test cases for each data type
