@@ -1,9 +1,5 @@
 const { effect } = require('collection-ops');
-const {
-    testCasesForData,
-    testThatTheResultIsReusable,
-    testThatTheParametersAreNotModified,
-} = require('../test-utils');
+const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../test-utils');
 
 describe('effect', () => {
     testThatTheResultIsReusable(effect(() => {})([1, 2, 3]));

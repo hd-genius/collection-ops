@@ -1,9 +1,5 @@
 const { filter } = require('collection-ops');
-const {
-    testCasesForData,
-    testThatTheResultIsReusable,
-    testThatTheParametersAreNotModified,
-} = require('../test-utils');
+const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../test-utils');
 
 describe('filter', () => {
     testThatTheResultIsReusable(filter((x) => x < 3)([1, 2, 3]));

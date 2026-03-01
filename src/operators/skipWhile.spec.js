@@ -1,9 +1,5 @@
 const { skipWhile } = require('collection-ops');
-const {
-    testCasesForData,
-    testThatTheResultIsReusable,
-    testThatTheParametersAreNotModified,
-} = require('../test-utils');
+const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../test-utils');
 
 describe('skipWhile', () => {
     testThatTheResultIsReusable(skipWhile((x) => x < 3)([1, 2, 3, 4]));

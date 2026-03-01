@@ -1,9 +1,5 @@
 const { skip } = require('collection-ops');
-const {
-    testCasesForData,
-    testThatTheResultIsReusable,
-    testThatTheParametersAreNotModified,
-} = require('../test-utils');
+const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../test-utils');
 
 describe('skip', () => {
     testThatTheResultIsReusable(skip(2)([1, 2, 3, 4, 5]));

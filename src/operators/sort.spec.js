@@ -1,8 +1,4 @@
-const {
-    testCasesForData,
-    testThatTheResultIsReusable,
-    testThatTheParametersAreNotModified,
-} = require('../test-utils');
+const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../test-utils');
 const { sort } = require('collection-ops');
 
 describe('sort', () => {

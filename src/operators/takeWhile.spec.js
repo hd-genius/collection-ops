@@ -1,9 +1,5 @@
 const { takeWhile } = require('collection-ops');
-const {
-    testThatTheResultIsReusable,
-    testThatTheParametersAreNotModified,
-    testCasesForData,
-} = require('../test-utils');
+const { testThatTheResultIsReusable, testThatTheParametersAreNotModified, testCasesForData } = require('../test-utils');
 
 describe('takeWhile', () => {
     testThatTheResultIsReusable(takeWhile((x) => x < 3)([1, 2, 3]));

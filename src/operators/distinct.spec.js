@@ -1,9 +1,5 @@
 const { distinct } = require('collection-ops');
-const {
-    testCasesForData,
-    testThatTheResultIsReusable,
-    testThatTheParametersAreNotModified,
-} = require('../test-utils');
+const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../test-utils');
 
 describe('distinct', () => {
     testThatTheResultIsReusable(distinct([1, 1, 2, 2, 3]));

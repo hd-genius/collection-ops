@@ -1,9 +1,5 @@
 const { limit } = require('collection-ops');
-const {
-    testCasesForData,
-    testThatTheResultIsReusable,
-    testThatTheParametersAreNotModified,
-} = require('../test-utils');
+const { testCasesForData, testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../test-utils');
 
 describe('limit', () => {
     testThatTheResultIsReusable(limit(2)([1, 2, 3]));
