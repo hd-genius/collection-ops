@@ -3,7 +3,7 @@ const {
     testCasesForData,
     testThatTheResultIsReusable,
     testThatTheParametersAreNotModified,
-} = require('../../test-utils');
+} = require('../test-utils');
 
 describe('skipWhile', () => {
     testThatTheResultIsReusable(skipWhile((x) => x < 3)([1, 2, 3, 4]));

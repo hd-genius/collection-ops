@@ -3,7 +3,7 @@ const {
     testCasesForData,
     testThatTheResultIsReusable,
     testThatTheParametersAreNotModified,
-} = require('../../test-utils');
+} = require('../test-utils');
 
 describe('skip', () => {
     testThatTheResultIsReusable(skip(2)([1, 2, 3, 4, 5]));

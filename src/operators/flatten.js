@@ -1,4 +1,4 @@
-const { reusable } = require('../../helpers');
+const { reusable } = require('../helpers');
 
 function isIterable(value) {
     return value[Symbol.iterator];

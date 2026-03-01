@@ -3,7 +3,7 @@ const {
     testCasesForData,
     testThatTheResultIsReusable,
     testThatTheParametersAreNotModified,
-} = require('../../test-utils');
+} = require('../test-utils');
 
 describe('effect', () => {
     testThatTheResultIsReusable(effect(() => {})([1, 2, 3]));

@@ -1,4 +1,4 @@
-const { reusable } = require('../../helpers');
+const { reusable } = require('../helpers');
 
 /**
  * Cannot be used with infinite collections, it will cause an infinite loop.

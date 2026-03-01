@@ -2,7 +2,7 @@ const {
     testCasesForData,
     testThatTheResultIsReusable,
     testThatTheParametersAreNotModified,
-} = require('../../test-utils');
+} = require('../test-utils');
 const { map } = require('collection-ops');
 
 describe('map', () => {

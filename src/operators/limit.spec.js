@@ -3,7 +3,7 @@ const {
     testCasesForData,
     testThatTheResultIsReusable,
     testThatTheParametersAreNotModified,
-} = require('../../test-utils');
+} = require('../test-utils');
 
 describe('limit', () => {
     testThatTheResultIsReusable(limit(2)([1, 2, 3]));

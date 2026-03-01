@@ -1,5 +1,5 @@
 const { flatten } = require('collection-ops');
-const { testCasesForData } = require('../../test-utils');
+const { testCasesForData } = require('../test-utils');
 
 describe('flatten', () => {
     testCasesForData([

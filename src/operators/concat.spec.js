@@ -1,5 +1,5 @@
 const { concat } = require('collection-ops');
-const { testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../../test-utils');
+const { testThatTheResultIsReusable, testThatTheParametersAreNotModified } = require('../test-utils');
 
 describe('concat', () => {
     testThatTheResultIsReusable(concat([1, 2, 3], [4, 5]));

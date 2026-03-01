@@ -3,7 +3,7 @@ const {
     testCasesForData,
     testThatTheResultIsReusable,
     testThatTheParametersAreNotModified,
-} = require('../../test-utils');
+} = require('../test-utils');
 
 describe('filter', () => {
     testThatTheResultIsReusable(filter((x) => x < 3)([1, 2, 3]));

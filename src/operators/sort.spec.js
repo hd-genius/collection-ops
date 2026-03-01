@@ -2,7 +2,7 @@ const {
     testCasesForData,
     testThatTheResultIsReusable,
     testThatTheParametersAreNotModified,
-} = require('../../test-utils');
+} = require('../test-utils');
 const { sort } = require('collection-ops');
 
 describe('sort', () => {
