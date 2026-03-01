@@ -25,5 +25,7 @@ jobs:
       run: npm ci
     - name: Run unit tests
       run: npm run test
-    - name: Check code
-      run: npm run code-check
+    - name: Lint code
+      run: npm run lint-check
+    - name: Check format
+      run: npm run format-check

@@ -12,10 +12,8 @@
         "jest": "readonly",
         "expect": "readonly"
     },
-    "plugins": ["prettier"],
+    "plugins": [],
     "rules": {
-        // Code formatting
-        "prettier/prettier": "error",
         //Possible Errors
         // The following rules point out areas where you might have made mistakes.
         "no-cond-assign": 2, // disallow assignment in conditional expressions
