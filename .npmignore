@@ -6,6 +6,6 @@
 test-utils.js
 
 # Documentation files
-docs
+_site
 types.js
 example.js
