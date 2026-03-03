@@ -13,7 +13,7 @@
     "lint-fix": "eslint src --fix",
     "format-check": "prettier --config .prettierrc.json --check src ",
     "format-fix": "prettier --config .prettierrc.json --write src",
-    "docs": "jsdoc -R docs/README.md -r src -d _site"
+    "docs": "jsdoc --configure jsdoc.json --verbose"
   },
   "keywords": [
     "functional programming",
@@ -25,11 +25,12 @@
   "jest": {},
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "clean-jsdoc-theme": "^4.3.0",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^26.6.3",
-    "jsdoc": "^3.6.6",
+    "jsdoc": "^4.0.5",
     "prettier": "^2.4.1"
   },
   "repository": {
