@@ -14,7 +14,7 @@ module.exports = (comparator) =>
     reusable(function* (source) {
         let remainingValues = Array.from(source);
         while (remainingValues.length > 0) {
-            for (let index = remainingValues.length; index > 0; index--) {
+            for (let index = remainingValues.length - 1; index > 0; index--) {
                 let currentValue = remainingValues[index];
                 let nextIndex = index - 1;
                 let nextValue = remainingValues[nextIndex];
